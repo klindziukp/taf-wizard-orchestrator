@@ -20,8 +20,8 @@ docker-compose -f docker-compose.yml up
 ```bash
 sh script/image-build/image-build.sh
 ```
-- Build Java TAF docker image
- Add link to readme
+- Build Java TAF provider docker image
+ [Java TAF provider](https://github.com/klindziukp/java-taf-provider#readme)
 - Start system with docker compose
 ```bash
 docker-compose -f docker-compose-all.yml up
