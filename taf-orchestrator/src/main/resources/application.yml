@@ -1,0 +1,28 @@
+server:
+  port: 8080
+com:
+  klindziuk:
+    thread-mode:
+      virtual: true
+    taf:
+      provider:
+        java:
+          base-url: http://localhost:8081
+          module-path: api/v1/provider/modules
+          project-path: api/v1/provider/zip
+        js:
+          base-url: http://tba
+          module-path: api/v1/tba
+          project-path: api/v1/tba
+        dotnet:
+          base-url: http://tba
+          module-path: api/v1/tba
+          project-path: api/v1/tba
+        python:
+          base-url: http://tba
+          module-path: api/v1/tba
+          project-path: api/v1/tba
+        mock:
+          base-url: http://localhost:8082
+          module-path: api/v1/provider/modules
+          project-path: api/v1/provider/zip

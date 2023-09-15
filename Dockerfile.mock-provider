@@ -1,0 +1,8 @@
+FROM amazoncorretto:20-alpine-jdk
+ENV APP_HOME=/usr/app/
+WORKDIR $APP_HOME
+
+ADD build/libs/taf-mock-provider-0.0.1-SNAPSHOT.jar taf-mock-provider.jar
+
+EXPOSE 8082
+ENTRYPOINT ["sh", "-c", "java --enable-preview -jar taf-mock-provider.jar"]

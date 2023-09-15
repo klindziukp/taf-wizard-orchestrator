@@ -1,0 +1,23 @@
+version: "3.2"
+services:
+  taf-orchestrator:
+    container_name: taf-orchestrator
+    image: klindziuk/taf-orchestrator:1.0.0
+    environment:
+      server.port: 8080
+      com.klindziuk.taf.provider.java.base-url: http://java-taf-provider:8081
+      com.klindziuk.taf.provider.mock.base-url: http://taf-mock-provider:8082
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  taf-mock-provider:
+    container_name: taf-mock-provider
+    image: klindziuk/taf-mock-provider:1.0.0
+    environment:
+      server.port: 8082
+    ports:
+      - 8082:8082
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
