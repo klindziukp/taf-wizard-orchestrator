@@ -32,7 +32,7 @@ docker-compose -f docker-compose-all.yml up
 ```bash
 http://localhost:8080/v3/api-docs
 ```
-- Open 'http://{server}:{port}/swagger-ui.html' to view api endpoints for TDM service
+- Open 'http://{server}:{port}/webjars/swagger-ui.html' to view api endpoints for TDM service
 ```bash
 http://localhost:8080/webjars/swagger-ui/index.html
 ```
