@@ -4,5 +4,7 @@ WORKDIR $APP_HOME
 
 ADD build/libs/taf-mock-provider-0.0.1-SNAPSHOT.jar taf-mock-provider.jar
 
+COPY /src/main/resources/mock-example.zip taf-mock-provider/src/main/resources/mock-example.zip
+
 EXPOSE 8082
 ENTRYPOINT ["sh", "-c", "java --enable-preview -jar taf-mock-provider.jar"]
