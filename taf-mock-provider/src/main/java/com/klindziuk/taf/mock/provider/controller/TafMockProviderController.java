@@ -34,11 +34,9 @@ public class TafMockProviderController {
 
   private byte[] getZipBytes() {
     try {
-      return Files.readAllBytes(Paths.get("taf-mock-provider/src/main/resources/mock-example.zip"));
+      return Files.readAllBytes(Paths.get("src/main/resources/mock-example.zip"));
     } catch (IOException ex) {
-      log.error(
-          "Unable to read bytes from path: '{}'",
-          "taf-mock-provider/src/main/resources/mock-example.zip");
+      log.error("Unable to read bytes from path: '{}'", "src/main/resources/mock-example.zip");
       throw new RuntimeException(ex);
     }
   }

@@ -5,7 +5,24 @@ Service which orchestrates TAFs generation for different language platforms
 - JAVA
 - MOCK
 
+## Orchestrator + Mock service set up via Gradle
+- Install JDK 21
+- Build service via command
+```bash
+./gradlew clean build
+```
+- Run `taf-orchestrator`  via command
+```bash
+./gradlew :taf-orchestrator:bootRun
+```
+
+- Run `taf-mock-provider`  via command
+```bash
+./gradlew :taf-mock-provider:bootRun
+```
+
 ## Orchestrator + Mock service set up via docker-compose
+- Install JDK 21
 - Build Docker images via command(it will take time)
 ```bash
 sh script/image-build/image-build.sh
@@ -16,6 +33,7 @@ docker-compose -f docker-compose.yml up
 ```
 
 ## Orchestrator + Mock + Java TAF provider service set up via docker-compose
+- Install JDK 21
 - Build Docker images via command(it will take time)
 ```bash
 sh script/image-build/image-build.sh

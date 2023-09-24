@@ -1,15 +1,15 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.1.3'
+	id 'org.springframework.boot' version '3.1.4'
 	id 'io.spring.dependency-management' version '1.1.3'
-	id 'com.diffplug.spotless' version '6.18.0'
+	id 'com.diffplug.spotless' version '6.21.0'
 }
 
 group = 'com.klindziuk'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '20'
+	sourceCompatibility = '21'
 }
 
 configurations {
@@ -53,7 +53,7 @@ allprojects { project ->
 			endWithNewline()
 		}
 		java {
-			googleJavaFormat('1.16.0').reflowLongStrings()
+			googleJavaFormat('1.17.0').reflowLongStrings()
 			formatAnnotations()
 			removeUnusedImports()
 			licenseHeader '/*\n * Copyright (c) Dandelion development.\n */\n\n'
@@ -61,14 +61,6 @@ allprojects { project ->
 
 		tasks.named('test') {
 			useJUnitPlatform()
-		}
-
-		tasks.withType(JavaCompile) {
-			options.compilerArgs += "--enable-preview"
-		}
-
-		tasks.withType(JavaExec) {
-			jvmArgs += "--enable-preview"
 		}
 
 		bootBuildImage {
@@ -80,14 +72,6 @@ allprojects { project ->
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-tasks.withType(JavaCompile) {
-	options.compilerArgs += "--enable-preview"
-}
-
-tasks.withType(JavaExec) {
-	jvmArgs += "--enable-preview"
 }
 
 bootBuildImage {
