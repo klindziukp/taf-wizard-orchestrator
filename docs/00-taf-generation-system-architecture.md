@@ -17,11 +17,11 @@ Currently, we need to define architecture and delivery flow across language plat
 * The system must be resilient to transient failures
 * Generated code should be compilable and ready for execution in corresponding environment for every language
 * The system should be able to deliver best practices based on examples and documentation
-* 
+  
 ## Option: Microservice architecture (TAF Orchestrator + Language platform TAF providers)
 ### Overall diagram
 ![Overall](image/c4-0.png)
-### Wizard Orchestrator diagram
+### TAF Orchestrator diagram
 ![Overall](image/c4-0.png)
 ### TAF Provider diagram
 ![Overall](image/c4-2.png)
